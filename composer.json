@@ -1,0 +1,16 @@
+{
+    "name": "qcubed/plugin/ckeditor",
+    "description": "QCubed plugin for CKEditor.",
+    "type": "library",
+    "keywords": ["qcubed", "ckeditor"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+      "psr-4": {"QCubed\\Plugin\\": "includes/"}
+    },
+    "extra": {
+        "examples": ["ckeditor.php"]
+    }
+}
