@@ -8,9 +8,17 @@
         "php": ">=5.4"
     },
     "autoload": {
-      "psr-4": {"QCubed\\Plugin\\": "includes/"}
+      "psr-4": {
+        "QCubed\\Plugin\\": "includes/",
+        "QCubed\\Plugin\\QCKEditor": "composer/"
+      }
     },
     "extra": {
         "examples": ["ckeditor.php"]
+    },
+    "scripts": {
+       "post-package-install": [
+         "QCubed\\Plugin\\QCKEditor\\Install::postPackageInstall"
+       ]
     }
 }
