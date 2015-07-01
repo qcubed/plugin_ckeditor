@@ -18,13 +18,13 @@
     },
     "scripts": {
        "post-package-install": [
-         "\\QCubed\\Plugin\\QCKEditor\\Install::postPackageInstall"
+         "QCubed\\Plugin\\QCKEditor\\Install::postPackageInstall"
        ],
       "post-package-update": [
-        "\\QCubed\\Plugin\\QCKEditor\\Install::postPackageUpdate"
+        "QCubed\\Plugin\\QCKEditor\\Install::postPackageUpdate"
       ],
       "post-package-uninstall": [
-        "\\QCubed\\Plugin\\QCKEditor\\Install::postPackageUninstall"
+        "QCubed\\Plugin\\QCKEditor\\Install::postPackageUninstall"
       ]
     }
 }
