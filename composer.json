@@ -10,7 +10,7 @@
     "autoload": {
       "psr-4": {
         "QCubed\\Plugin\\": "includes/",
-        "QCubed\\Plugin\\QCKEditor": "composer/"
+        "QCubed\\Plugin\\QCKEditor\\": "composer/"
       }
     },
     "extra": {
