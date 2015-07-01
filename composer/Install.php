@@ -12,6 +12,7 @@ class Install
 	{
 		$installedPackage = $event->getOperation()->getPackage();
 		$strPackageName = $installedPackage->getName();
+		echo 'Found ' . $strPackageName . "/n";
 		\QCubed\Installer::ComposerPluginInstall($strPackageName);
 	}
 
@@ -19,6 +20,7 @@ class Install
 	{
 		$installedPackage = $event->getOperation()->getPackage();
 		$strPackageName = $installedPackage->getName();
+		echo 'Found ' . $strPackageName . "/n";
 		\QCubed\Installer::ComposerPluginInstall($strPackageName);
 	}
 
@@ -26,6 +28,7 @@ class Install
 	{
 		$installedPackage = $event->getOperation()->getPackage();
 		$strPackageName = $installedPackage->getName();
+		echo 'Found ' . $strPackageName . "/n";
 		\QCubed\Installer::ComposerPluginUninstall($strPackageName);
 	}
 }
