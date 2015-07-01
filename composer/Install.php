@@ -21,4 +21,12 @@ class Install
 		$strPackageName = $installedPackage->getName();
 		\QCubed\Installer::ComposerPluginInstall($strPackageName);
 	}
+
+	public static function postPackageUninstall(PacakgeEvent $event)
+	{
+		$installedPackage = $event->getOperation()->getPackage();
+		$strPackageName = $installedPackage->getName();
+		\QCubed\Installer::ComposerPluginUninstall($strPackageName);
+	}
 }
+
