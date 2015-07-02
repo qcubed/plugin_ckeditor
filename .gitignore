@@ -1,0 +1,10 @@
+/.idea/
+/.settings/
+/_notes/
+/*.project
+/.buildpath
+.htaccess
+/composer.lock
+**/.DS_Store
+**/dwsync.xml
+

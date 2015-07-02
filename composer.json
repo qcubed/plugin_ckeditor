@@ -9,22 +9,10 @@
     },
     "autoload": {
       "psr-4": {
-        "QCubed\\Plugin\\": "includes/",
-        "QCubed\\Plugin\\QCKEditor\\": "composer/"
+        "QCubed\\Plugin\\": "includes/"
       }
     },
     "extra": {
         "examples": ["ckeditor.php"]
-    },
-    "scripts": {
-       "post-package-install": [
-         "QCubed\\Plugin\\QCKEditor\\Install::postPackageInstall"
-       ],
-      "post-package-update": [
-        "QCubed\\Plugin\\QCKEditor\\Install::postPackageUpdate"
-      ],
-      "post-package-uninstall": [
-        "QCubed\\Plugin\\QCKEditor\\Install::postPackageUninstall"
-      ]
     }
 }
