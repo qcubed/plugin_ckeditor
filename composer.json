@@ -1,7 +1,7 @@
 {
-    "name": "qcubed/plugin/ckeditor",
+    "name": "qcubed/plugin_ckeditor",
     "description": "QCubed plugin for CKEditor.",
-    "type": "library",
+    "type": "qcubed-plugin",
     "keywords": ["qcubed", "ckeditor"],
     "license": "MIT",
     "require": {
