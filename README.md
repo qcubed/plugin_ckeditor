@@ -18,7 +18,7 @@ To install, add the following to the corresponding sections of your composer.jso
 and
 ```
 	"require": {
-		"qcubed/plugin/ckeditor": "dev-master"
+		"qcubed/plugin_ckeditor": "dev-master"
         "ckeditor/ckeditor": "4.*"
 	},
 
