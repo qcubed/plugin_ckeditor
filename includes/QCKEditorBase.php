@@ -29,7 +29,14 @@ class QCKEditorBase extends \QTextBoxBase {
 
 	// currently cannot use ajax
 	public function GetControlJavaScript() {
-		return sprintf('jQuery("#%s").%s(%s)', $this->getJqControlId(), $this->getJqSetupFunction(), $this->strJsReadyFunc);
+		$strFormId = $this->Form->FormId;
+		$strControlId = $this->strControlId;
+		$strReadyFunc = 'null';
+		if ($this->strJsReadyFunc) {
+			$strReadyFunc = $this->strJsReadyFunc;
+		}
+		$strJs = "function() {qcubed.qckeditor(this, '{$strFormId}', '{$strControlId}', {$strReadyFunc});}";
+		return sprintf('jQuery("#%s").%s(%s)', $this->getJqControlId(), $this->getJqSetupFunction(), $strJs);
 	}
 
 	public function GetEndScript() {
@@ -40,7 +47,9 @@ class QCKEditorBase extends \QTextBoxBase {
 
 		//$this->blnModified = true;
 		switch ($strName) {
-			case "ReadyFunction":	// The name of a javascript function to call after the CKEditor instance is ready, so that you can do further initialization
+			case "ReadyFunction":
+				// The name of a javascript function to call after the CKEditor instance is ready, so that you can do further initialization
+				// This function will receive the formId and controlId as parameters, and "this" will be the ckeditor instance.
 				try {
 					$this->strJsReadyFunc = QType::Cast($mixValue, QType::String);
 					break;
