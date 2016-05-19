@@ -6,19 +6,10 @@ This plugin is just for the PHP interface to CKEditor. You must also install the
 installable via Composer. The directions below show you how to install both.
 
 To install, add the following to the corresponding sections of your composer.json root file and execute ```composer update```:
-```
-	"repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/qcubed/plugin_ckeditor"
-        }
 
-    ],
-```    
-and
 ```
 	"require": {
-		"qcubed/plugin/ckeditor": "dev-master"
+		"qcubed/plugin_ckeditor": "dev-master"
         "ckeditor/ckeditor": "4.*"
 	},
 
