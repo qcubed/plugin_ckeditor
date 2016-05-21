@@ -8,6 +8,9 @@
 		to create a text editing block with full HTML editing capabilities. The text returned from it is HTML.
 		</p>
 		<?php $this->txtEditor->Render(); ?>
+		<?php $this->btnSubmit->Render(); ?>
+		<h3>The HTML you typed:</h3>
+		<?php $this->pnlResult->Render(); ?>
 	</div>
 
 <?php $this->RenderEnd(); ?>
