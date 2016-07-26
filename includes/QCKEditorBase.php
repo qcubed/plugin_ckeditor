@@ -57,7 +57,7 @@ class QCKEditorBase extends \QTextBoxBase {
 				// The name of a javascript function to call after the CKEditor instance is ready, so that you can do further initialization
 				// This function will receive the formId and controlId as parameters, and "this" will be the ckeditor instance.
 				try {
-					$this->strJsReadyFunc = QType::Cast($mixValue, QType::String);
+					$this->strJsReadyFunc = \QType::Cast($mixValue, \QType::String);
 					break;
 				} catch (QInvalidCastException $objExc) {
 					$objExc->IncrementOffset();
