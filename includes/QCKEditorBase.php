@@ -4,7 +4,13 @@
  */
 
 namespace QCubed\Plugin;
-
+/**
+ * Class QCKEditorBase: For creating a Rich text editor with CKEditor
+ *
+ * @package QCubed\Plugin
+ *
+ * @property-write string $ReadyFunction JS function to pass to the ckeditor creation instance
+ */
 class QCKEditorBase extends \QTextBoxBase {
 
 	protected $strJsReadyFunc = 'function(){}';
