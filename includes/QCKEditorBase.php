@@ -4,7 +4,13 @@
  */
 
 namespace QCubed\Plugin;
-
+/**
+ * Class QCKEditorBase: For creating a Rich text editor with CKEditor
+ *
+ * @package QCubed\Plugin
+ *
+ * @property-write string $ReadyFunction JS function to pass to the ckeditor creation instance
+ */
 class QCKEditorBase extends \QTextBoxBase {
 
 	protected $strJsReadyFunc = 'function(){}';
@@ -51,7 +57,7 @@ class QCKEditorBase extends \QTextBoxBase {
 				// The name of a javascript function to call after the CKEditor instance is ready, so that you can do further initialization
 				// This function will receive the formId and controlId as parameters, and "this" will be the ckeditor instance.
 				try {
-					$this->strJsReadyFunc = QType::Cast($mixValue, QType::String);
+					$this->strJsReadyFunc = \QType::Cast($mixValue, \QType::String);
 					break;
 				} catch (QInvalidCastException $objExc) {
 					$objExc->IncrementOffset();
