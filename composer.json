@@ -13,6 +13,6 @@
       }
     },
     "extra": {
-        "examples": ["ckeditor.php"]
+        "examples": ["ckeditor.php", "ckeditor2.php"]
     }
 }

@@ -8,6 +8,7 @@ namespace QCubed\Plugin;
 class QCKEditorBase extends \QTextBoxBase {
 
 	protected $strJsReadyFunc = 'function(){}';
+	protected $strConfiguration = '{}';
 
 	public function __construct($objParentObject, $strControlId = null) {
 		parent::__construct($objParentObject, $strControlId);
@@ -36,7 +37,7 @@ class QCKEditorBase extends \QTextBoxBase {
 			$strReadyFunc = $this->strJsReadyFunc;
 		}
 		$strJs = "function() {qcubed.qckeditor(this, '{$strFormId}', '{$strControlId}', {$strReadyFunc});}";
-		return sprintf('jQuery("#%s").%s(%s)', $this->getJqControlId(), $this->getJqSetupFunction(), $strJs);
+		return sprintf('jQuery("#%s").%s(%s, %s)', $this->getJqControlId(), $this->getJqSetupFunction(), $strJs, $this->strConfiguration);
 	}
 
 	public function GetEndScript() {
@@ -58,6 +59,18 @@ class QCKEditorBase extends \QTextBoxBase {
 					throw $objExc;
 				}
 				break;
+
+			case "Configuration":
+				// The configuration string. Could be a name of an object, or a javascript object (sourrounded by braces {})
+				try {
+					$this->strConfiguration = \QType::Cast($mixValue, \QType::String);
+					break;
+				} catch (QInvalidCastException $objExc) {
+					$objExc->IncrementOffset();
+					throw $objExc;
+				}
+				break;
+
 
 			default:
 				try {
