@@ -10,6 +10,7 @@ namespace QCubed\Plugin;
  * @package QCubed\Plugin
  *
  * @property-write string $ReadyFunction JS function to pass to the ckeditor creation instance
+ * @property-write string $Configuration Configuration options to pass to the ckeditor instance
  */
 class QCKEditorBase extends \QTextBoxBase {
 
