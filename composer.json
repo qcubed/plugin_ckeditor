@@ -9,7 +9,7 @@
     },
     "autoload": {
       "psr-4": {
-        "QCubed\\Plugin\\": "includes/"
+        "QCubed\\Plugin\\CKEditor\\": "includes/"
       }
     },
     "extra": {
