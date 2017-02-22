@@ -3,7 +3,7 @@
  * This file contains the QCKEditor Class.
  */
 
-namespace QCubed\Plugin;
+namespace QCubed\Plugin\CKEditor;
 /**
  * Class QCKEditorBase: For creating a Rich text editor with CKEditor
  *
