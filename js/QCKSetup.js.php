@@ -1,7 +1,7 @@
 // CKEditor Setup Functions
 
 // Must be path to ckeditor relative to DOCROOT
-var CKEDITOR_BASEPATH = qc.baseDir + "/vendor/ckeditor/ckeditor/";
+var CKEDITOR_BASEPATH = qc.baseDir + "<?= __VENDOR_ASSETS__ ?>/ckeditor/ckeditor/";
 
 // Insert a custom startup function into qcubed to help us retrieve data during ajax calls.
 qcubed.qckeditor = function (inst, formId, controlId, customReadyFunc) {

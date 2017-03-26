@@ -10,7 +10,7 @@ namespace QCubed\Plugin;
  * @package QCubed\Plugin
  *
  * @property-write string $ReadyFunction JS function to pass to the ckeditor creation instance
- * @property-write string $Configuration Configuration options to pass to the ckeditor instance
+ * @property-write string $Configuration JS structure that configures the ckeditor instance
  */
 class QCKEditorBase extends \QTextBoxBase {
 
@@ -26,7 +26,7 @@ class QCKEditorBase extends \QTextBoxBase {
 	}
 
 	protected function registerFiles() {
-		$this->AddPluginJavascriptFile("ckeditor", "QCKSetup.js");
+		$this->AddPluginJavascriptFile("ckeditor", "QCKSetup.js.php");
 		$this->AddJavascriptFile(__VENDOR_ASSETS__ . "/ckeditor/ckeditor/ckeditor.js");
 		$this->AddJavascriptFile(__VENDOR_ASSETS__ . "/ckeditor/ckeditor/adapters/jquery.js");
 	}
